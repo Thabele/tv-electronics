@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugah Mike</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .brand-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+  
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-tv text-3xl text-blue-600 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Ugah Mike TV&Electronics</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800 px-3 py-2">Home</a>
+                        <a href="services.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Services</a>
+                        <a href="view.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Products</a>
+                        <a href="about.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">About</a>
+                        <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Contact</a>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                            <a href="book.html">Book Repair</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Services</a>
+                <a href="view.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Products</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium mt-2">
+                    Book Repair
+                </button>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Products Grid -->
+      <!-- Products Section -->
+<section id="products" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+        <!-- Product 1 - TV -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="tvs">
+            <div class="relative h-64">
+                <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="OLED TV">
+            </div>
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+                    <span class="text-sm font-semibold text-gray-600">4K OLED</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Samsung QN90B Neo QLED TV</h3>
+                <p class="text-gray-600 mb-4">65" 4K UHD Smart TV with Quantum HDR 32X and Dolby Atmos.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold text-gray-900">R1,799</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 - Microwave -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="microwaves">
+            <div class="relative h-64">
+                <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Microwave">
+            </div>
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-semibold text-blue-600">LG</span>
+                    <span class="text-sm font-semibold text-gray-600">Smart Inverter</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">LG NeoChef Microwave</h3>
+                <p class="text-gray-600 mb-4">32L Smart Inverter Microwave with EasyClean and 10 power levels.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold text-gray-900">R349</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 - Appliance -->
+        <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="appliances">
+            <div class="relative h-64">
+                <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1584564472417a8c4e9a8f255b2c2cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Refrigerator">
+            </div>
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-semibold text-blue-600">WHIRLPOOL</span>
+                    <span class="text-sm font-semibold text-gray-600">French Door</span>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Whirlpool Refrigerator</h3>
+                <p class="text-gray-600 mb-4">25 cu. ft. French Door Refrigerator with TwinChill Cooling System.</p>
+                <div class="flex items-center justify-between">
+                    <span class="text-2xl font-bold text-gray-900">R1,299</span>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+ <!-- Product 1 - TV -->
+ <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="tvs">
+    <div class="relative h-64">
+        <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="OLED TV">
+    </div>
+    <div class="p-6">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+            <span class="text-sm font-semibold text-gray-600">4K OLED</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Samsung QN90B Neo QLED TV</h3>
+        <p class="text-gray-600 mb-4">65" 4K UHD Smart TV with Quantum HDR 32X and Dolby Atmos.</p>
+        <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-gray-900">R1,799</span>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 2 - Microwave -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="microwaves">
+    <div class="relative h-64">
+        <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Microwave">
+    </div>
+    <div class="p-6">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-semibold text-blue-600">LG</span>
+            <span class="text-sm font-semibold text-gray-600">Smart Inverter</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">LG NeoChef Microwave</h3>
+        <p class="text-gray-600 mb-4">32L Smart Inverter Microwave with EasyClean and 10 power levels.</p>
+        <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-gray-900">R349</span>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Product 3 - Appliance -->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-category="appliances">
+    <div class="relative h-64">
+        <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1584564472417a8c4e9a8f255b2c2cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Refrigerator">
+    </div>
+    <div class="p-6">
+        <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-semibold text-blue-600">WHIRLPOOL</span>
+            <span class="text-sm font-semibold text-gray-600">French Door</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Whirlpool Refrigerator</h3>
+        <p class="text-gray-600 mb-4">25 cu. ft. French Door Refrigerator with TwinChill Cooling System.</p>
+        <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-gray-900">R1,299</span>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+</div>
+</section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Ugah Mike TV&Electronics</h3>
+                    <p class="text-gray-400 mb-4">Premium TV & electronics repair services with authorized partnerships with leading brands.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">TV Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Microwave Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">DSTV-Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home Theater Setup</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Warranty Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>118 High Street, Turffontein<br>Johannesburg, 2190</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(011) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>ugah@electronics.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 9AM - 7PM<br>Sat: 10AM - 5PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Ugah Mike TV&Electronics. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+// Category filtering functionality
+document.querySelectorAll('.category-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Update active tab styling
+        document.querySelectorAll('.category-tab').forEach(t => {
+            t.classList.remove('bg-blue-600', 'text-white');
+            t.classList.add('bg-gray-200', 'hover:bg-gray-300');
+        });
+        this.classList.add('bg-blue-600', 'text-white');
+        this.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+        
+        // Filter products
+        const category = this.dataset.category;
+        const products = document.querySelectorAll('.product-card');
+        
+        products.forEach(product => {
+            if (category === 'all' || product.dataset.category === category) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+});
+
+// View All Button functionality
+document.getElementById('view-all-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    // Here you would typically redirect to a products page
+    // For demo purposes, we'll show all products
+    document.querySelectorAll('.category-tab').forEach(t => {
+        t.classList.remove('bg-blue-600', 'text-white');
+        t.classList.add('bg-gray-200', 'hover:bg-gray-300');
+    });
+    document.querySelector('.category-tab[data-category="all"]').classList.add('bg-blue-600', 'text-white');
+    
+    document.querySelectorAll('.product-card').forEach(product => {
+        product.style.display = 'block';
+    });
+    
+    // In a real implementation, you would redirect to your products page:
+    // window.location.href = '/products';
+});
+</script>
+</body>
+</html>

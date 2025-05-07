@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugah Mike</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .brand-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+  
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-tv text-3xl text-blue-600 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">Ugah Mike TV&Electronics</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800 px-3 py-2">Home</a>
+                        <a href="services.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Services</a>
+                        <a href="view.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Products</a>
+                        <a href="about.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">About</a>
+                        <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Contact</a>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                            <a href="book.html">Book Repair</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Services</a>
+                <a href="view.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Products</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium mt-2">
+                    Book Repair
+                </button>
+            </div>
+        </div>
+    </nav>
+   <!-- Navigation (Same as homepage) -->
+
+
+    <!-- Hero Section -->
+    <section class="bg-blue-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+            <p class="text-xl max-w-3xl mx-auto">Professional repair services for all your electronics</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- TV Repair -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-tv text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">TV Repair</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">We repair all brands and models of televisions with genuine parts.</p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Screen replacement</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Power supply issues</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> HDMI/AV port repairs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Backlight repairs</li>
+                    </ul>
+                    <div class="text-blue-600 font-medium">Starting from R850</div>
+                </div>
+
+                <!-- DSTV Installations -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-satellite-dish text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">DSTV Installations</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Certified MultiChoice installation services for homes and businesses.</p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> New installations</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Dish realignment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Multiroom setup</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Explora upgrades</li>
+                    </ul>
+                    <div class="text-blue-600 font-medium">Starting from R1,200</div>
+                </div>
+
+                <!-- Home Theater -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden p-6 border border-gray-100 hover:shadow-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-home text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Home Theater Setup</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Professional installation and calibration of home entertainment systems.</p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Sound system setup</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Smart home integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> Cable management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-blue-500 mr-2"></i> 4K/HDR calibration</li>
+                    </ul>
+                    <div class="text-blue-600 font-medium">Starting from R1,500</div>
+                </div>
+
+                <!-- (Add 3 more services following same pattern) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Areas We Serve</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-white p-4 rounded-lg shadow-sm">Johannesburg</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Sandton</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Randburg</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Roodepoort</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Midrand</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Soweto</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Pretoria</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">Centurion</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6">Need Electronic Repairs?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Same-day service available for most repairs. Book your appointment now.</p>
+            <a href="book.html" class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-8 py-3 rounded-md font-medium text-lg">
+                <i class="fas fa-calendar-alt mr-2"></i> Book Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+     <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Ugah Mike TV&Electronics</h3>
+                    <p class="text-gray-400 mb-4">Premium TV & electronics repair services with authorized partnerships with leading brands.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">TV Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Microwave Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">DSTV-Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home Theater Setup</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Warranty Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>118 High Street, Turffontein<br>Johannesburg, 2190</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(011) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>ugah@electronics.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 9AM - 7PM<br>Sat: 10AM - 5PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Ugah Mike TV&Electronics. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Simple animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .brand-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

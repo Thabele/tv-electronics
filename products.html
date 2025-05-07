@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugah Mike</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-ubuntu { font-family: 'Ubuntu', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .brand-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        .product-slider {
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+        }
+        .product-slider::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+        .slider-control {
+            transition: all 0.3s ease;
+        }
+        .slider-control:hover {
+            transform: scale(1.1);
+            background-color: rgba(59, 130, 246, 0.8);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800", class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Custom Logo - Replace 'your-logo.png' with your actual logo path -->
+                    <img 
+                        src="/imgs/c1.webp" 
+                        alt="Ugah Mike TV & Electronics Logo"
+                        class="h-12 w-auto md:h-16"><!-- Adjust height for mobile and desktop -->
+                    
+                    <!-- Optional: Keep the text next to logo if needed -->
+                    <span class="text-xl font-bold text-gray-900 ml-2 hidden sm:block">Ugah Mike TV&Electronics</span>
+                </div>
+            </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800 px-3 py-2">Home</a>
+                        <a href="services.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Services</a>
+                        <a href="products.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Products</a>
+                        <a href="about.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">About</a>
+                        <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Contact</a>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                            <a href="bookings.html">Book Repair</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Services</a>
+                <a href="products.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Products</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium mt-2">
+                    <a href="bookings.html">Book Repair</a>
+                </button>
+            </div>
+        </div>
+    </nav>
+       
+
+
+    <!-- Navigation (Same as other pages) -->
+
+    <!-- Hero Section -->
+    <section class="bg-blue-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
+            <p class="text-xl max-w-3xl mx-auto">Premium electronics from trusted brands</p>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="py-8 bg-white sticky top-0 z-10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex overflow-x-auto pb-2 space-x-4">
+                <button class="category-btn flex-shrink-0 px-6 py-2 rounded-full bg-blue-600 text-white font-medium">
+                   <a href="products.html">All Products</a>
+                </button>
+                <button class="category-btn flex-shrink-0 px-6 py-2 rounded-full bg-gray-200 hover:bg-gray-300 font-medium">
+                   <a href="tv.html"> Smart TVs</a>
+                </button>
+                <button class="category-btn flex-shrink-0 px-6 py-2 rounded-full bg-gray-200 hover:bg-gray-300 font-medium">
+                   <a href="all.html">DSTV Equipment</a>
+                </button>
+                <button class="category-btn flex-shrink-0 px-6 py-2 rounded-full bg-gray-200 hover:bg-gray-300 font-medium">
+                   <a href="all.html">Home Audio</a>
+                </button>
+                <button class="category-btn flex-shrink-0 px-6 py-2 rounded-full bg-gray-200 hover:bg-gray-300 font-medium">
+                   <a href="app.html">Appliances</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Slider -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Featured Products</h2>
+                <div class="flex space-x-2">
+                    <button class="slider-prev slider-control w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-next slider-control w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="product-slider flex overflow-x-auto space-x-6 pb-6" style="scroll-snap-type: x mandatory;">
+                    <!-- Product 1 -->
+                    <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                        <div class="relative h-48">
+                            <img src="imgs/AI1.jpg" 
+                                 alt="Samsung TV" class="absolute h-full w-full object-cover">
+                            <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                                Sale
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Samsung QN90B QLED TV</h3>
+                            <p class="text-gray-600 text-sm mb-3">65" 4K Smart TV with Neo Quantum Processor</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-lg font-bold text-gray-900">R24,999</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R27,999</span>
+                                </div>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                        <div class="relative h-48">
+                            <img src="imgs/AI5.jpg" 
+                                 alt="LG TV" class="absolute h-full w-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-sm font-semibold text-blue-600">LG</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">LG C2 OLED TV</h3>
+                            <p class="text-gray-600 text-sm mb-3">55" 4K Smart TV with α9 Gen5 AI Processor</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-lg font-bold text-gray-900">R18,499</span>
+                                </div>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            <!-- Product 1 -->
+                            <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                                <div class="relative h-48">
+                                    <img src="imgs/AI1.jpg" 
+                                         alt="Samsung TV" class="absolute h-full w-full object-cover">
+                                    <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                                        Sale
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Samsung QN90B QLED TV</h3>
+                                    <p class="text-gray-600 text-sm mb-3">65" 4K Smart TV with Neo Quantum Processor</p>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <span class="text-lg font-bold text-gray-900">R24,999</span>
+                                            <span class="text-sm text-gray-500 line-through ml-2">R27,999</span>
+                                        </div>
+                                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Product 2 -->
+                            <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                                <div class="relative h-48">
+                                    <img src="https://images.unsplash.com/photo-1558379850-823f103f866a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="LG TV" class="absolute h-full w-full object-cover">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-sm font-semibold text-blue-600">LG</span>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">LG C2 OLED TV</h3>
+                                    <p class="text-gray-600 text-sm mb-3">55" 4K Smart TV with α9 Gen5 AI Processor</p>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <span class="text-lg font-bold text-gray-900">R18,499</span>
+                                        </div>
+                                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                                    <!-- Product 1 -->
+                    <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                        <div class="relative h-48">
+                            <img src="imgs/AI1.jpg" 
+                                 alt="Samsung TV" class="absolute h-full w-full object-cover">
+                            <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                                Sale
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Samsung QN90B QLED TV</h3>
+                            <p class="text-gray-600 text-sm mb-3">65" 4K Smart TV with Neo Quantum Processor</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-lg font-bold text-gray-900">R24,999</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R27,999</span>
+                                </div>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1558379850-823f103f866a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="LG TV" class="absolute h-full w-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-sm font-semibold text-blue-600">LG</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">LG C2 OLED TV</h3>
+                            <p class="text-gray-600 text-sm mb-3">55" 4K Smart TV with α9 Gen5 AI Processor</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-lg font-bold text-gray-900">R18,499</span>
+                                </div>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                            <!-- Product 1 -->
+                            <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                                <div class="relative h-48">
+                                    <img src="imgs/AI1.jpg" 
+                                         alt="Samsung TV" class="absolute h-full w-full object-cover">
+                                    <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                                        Sale
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">Samsung QN90B QLED TV</h3>
+                                    <p class="text-gray-600 text-sm mb-3">65" 4K Smart TV with Neo Quantum Processor</p>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <span class="text-lg font-bold text-gray-900">R24,999</span>
+                                            <span class="text-sm text-gray-500 line-through ml-2">R27,999</span>
+                                        </div>
+                                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Product 2 -->
+                            <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                                <div class="relative h-48">
+                                    <img src="https://images.unsplash.com/photo-1558379850-823f103f866a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="LG TV" class="absolute h-full w-full object-cover">
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-sm font-semibold text-blue-600">LG</span>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-gray-900 mb-2">LG C2 OLED TV</h3>
+                                    <p class="text-gray-600 text-sm mb-3">55" 4K Smart TV with α9 Gen5 AI Processor</p>
+                                    <div class="flex justify-between items-center">
+                                        <div>
+                                            <span class="text-lg font-bold text-gray-900">R18,499</span>
+                                        </div>
+                                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                                    <!-- Product 1 -->
+                    <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                        <div class="relative h-48">
+                            <img src="imgs/AI1.jpg" 
+                                 alt="Samsung TV" class="absolute h-full w-full object-cover">
+                            <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                                Sale
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-sm font-semibold text-blue-600">SAMSUNG</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Samsung QN90B QLED TV</h3>
+                            <p class="text-gray-600 text-sm mb-3">65" 4K Smart TV with Neo Quantum Processor</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-lg font-bold text-gray-900">R24,999</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">R27,999</span>
+                                </div>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="flex-shrink-0 w-64 sm:w-72 bg-white rounded-lg shadow-md overflow-hidden" style="scroll-snap-align: start;">
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1558379850-823f103f866a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="LG TV" class="absolute h-full w-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start mb-1">
+                                <span class="text-sm font-semibold text-blue-600">LG</span>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">LG C2 OLED TV</h3>
+                            <p class="text-gray-600 text-sm mb-3">55" 4K Smart TV with α9 Gen5 AI Processor</p>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-lg font-bold text-gray-900">R18,499</span>
+                                </div>
+                                <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add 4-6 more products following same structure -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Grid -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-center text-gray-900 mb-12">Shop by Category</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Category 1 -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI5.jpg" 
+                             alt="Smart TVs" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">Smart TVs</h3>
+                        <p class="text-sm text-gray-600">From R8,999</p>
+                    </div>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI7.jpg" 
+                             alt="DSTV" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">DSTV Equipment</h3>
+                        <p class="text-sm text-gray-600">From R1,299</p>
+                    </div>
+                </a>
+                 <!-- Category 1 -->
+                 <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI5.jpg" 
+                             alt="Smart TVs" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">Smart TVs</h3>
+                        <p class="text-sm text-gray-600">From R8,999</p>
+                    </div>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI7.jpg" 
+                             alt="DSTV" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">DSTV Equipment</h3>
+                        <p class="text-sm text-gray-600">From R1,299</p>
+                    </div>
+                </a>
+
+                 <!-- Category 1 -->
+                 <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI5.jpg" 
+                             alt="Smart TVs" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">Smart TVs</h3>
+                        <p class="text-sm text-gray-600">From R8,999</p>
+                    </div>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI7.jpg" 
+                             alt="DSTV" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">DSTV Equipment</h3>
+                        <p class="text-sm text-gray-600">From R1,299</p>
+                    </div>
+                </a>
+                 <!-- Category 1 -->
+                 <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI5.jpg" 
+                             alt="Smart TVs" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">Smart TVs</h3>
+                        <p class="text-sm text-gray-600">From R8,999</p>
+                    </div>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#" class="category-card bg-white rounded-lg shadow-md overflow-hidden group">
+                    <div class="relative h-40">
+                        <img src="imgs/AI7.jpg" 
+                             alt="DSTV" class="absolute h-full w-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-900 group-hover:text-blue-600">DSTV Equipment</h3>
+                        <p class="text-sm text-gray-600">From R1,299</p>
+                    </div>
+                </a>
+                <!-- Add 2-6 more categories following same structure -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as other pages) -->
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Ugah Mike TV&Electronics</h3>
+                    <p class="text-gray-400 mb-4">Premium TV & electronics repair services with authorized partnerships with leading brands.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">TV Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Microwave Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">DSTV-Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home Theater Setup</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Warranty Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>118 High Street, Turffontein<br>Johannesburg, 2190</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(011) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>ugah@electronics.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 9AM - 7PM<br>Sat: 10AM - 5PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Ugah Mike TV&Electronics. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Product Slider Navigation
+        const slider = document.querySelector('.product-slider');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        // Category Filtering
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                categoryBtns.forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
+                this.classList.add('bg-blue-600', 'text-white');
+                // In production: Filter products here
+            });
+        });
+
+        // Mobile touch scrolling for slider
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // Touch events for mobile
+        slider.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        slider.addEventListener('touchmove', (e) => {
+            if(!isDown) return;
+            const x = e.touches[0].pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>

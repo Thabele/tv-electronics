@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugah Mike</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-ubuntu { font-family: 'Ubuntu', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .brand-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+  
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Custom Logo - Replace 'your-logo.png' with your actual logo path -->
+                    <img 
+                        src="/imgs/c1.webp" 
+                        alt="Ugah Mike TV & Electronics Logo"
+                        class="h-12 w-auto md:h-16"><!-- Adjust height for mobile and desktop -->
+                    
+                    <!-- Optional: Keep the text next to logo if needed -->
+                    <span class="text-xl font-bold text-gray-900 ml-2 hidden sm:block">Ugah Mike TV&Electronics</span>
+                </div>
+            </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800 px-3 py-2">Home</a>
+                        <a href="services.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Services</a>
+                        <a href="view.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Products</a>
+                        <a href="about.html" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">About</a>
+                        <a href="#contact" class="text-gray-700 font-medium hover:text-blue-600 px-3 py-2">Contact</a>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                            <a href="book.html">Book Repair</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600">Home</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Services</a>
+                <a href="view.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Products</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium mt-2">
+                    Book Repair
+                </button>
+            </div>
+        </div>
+    </nav>
+
+<!-- Replace the existing booking form section with this enhanced version -->
+<section class="hero-gradient text-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Book Your Repair Service</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">Complete the form below and we'll confirm your appointment within 1 business hour.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Communication Channels -->
+            <div class="bg-white bg-opacity-10 rounded-xl p-6 backdrop-blur-sm border border-white border-opacity-20">
+                <h3 class="text-xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-comments mr-3 text-blue-300"></i> Instant Support
+                </h3>
+                <div class="space-y-4">
+                    <a href="https://wa.me/27672734086?text=Hi!%20I%20need%20help%20with%20my%20repair%20booking" 
+                       class="flex items-center justify-between bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg transition-all"
+                       target="_blank">
+                        <span><i class="fab fa-whatsapp mr-2"></i> WhatsApp</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="tel:+27672734086"
+                       class="flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg transition-all">
+                        <span><i class="fas fa-phone-alt mr-2"></i> Call Now</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="mailto:ugah@electronics.com?subject=Repair%20Support%20Request"
+                       class="flex items-center justify-between bg-gray-700 hover:bg-gray-600 text-white px-5 py-3 rounded-lg transition-all">
+                        <span><i class="fas fa-envelope mr-2"></i> Email Us</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-white border-opacity-20">
+                    <h4 class="font-semibold mb-3"><i class="fas fa-clock mr-2 text-blue-300"></i> Working Hours</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span class="font-medium">8:00 AM - 6:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday</span>
+                            <span class="font-medium">9:00 AM - 3:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span class="font-medium">Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Enhanced Order Form -->
+            <div class="lg:col-span-2 bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <form id="repairOrderForm" class="space-y-6">
+                        <!-- Progress Indicator -->
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex-1 border-t-2 border-blue-600 pt-1">
+                                <span class="flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full text-white">
+                                    1
+                                </span>
+                            </div>
+                            <div class="flex-1 border-t-2 border-gray-200 pt-1">
+                                <span class="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full text-gray-600">
+                                    2
+                                </span>
+                            </div>
+                            <div class="flex-1 border-t-2 border-gray-200 pt-1">
+                                <span class="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full text-gray-600">
+                                    3
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 1: Customer Information -->
+                        <div id="step1" class="form-step active">
+                            <h3 class="text-xl font-bold mb-6 text-gray-800">Your Contact Information</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="fullName" class="block text-gray-700 font-medium mb-2">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" 
+                                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                           required>
+                                    <div id="nameError" class="text-red-500 text-sm mt-1 hidden">Please enter your name</div>
+                                </div>
+                                
+                                <div>
+                                    <label for="phoneNumber" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
+                                    <input type="tel" id="phoneNumber" name="phoneNumber" 
+                                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                           required>
+                                    <div id="phoneError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid phone number</div>
+                                </div>
+                                
+                                <div>
+                                    <label for="emailAddress" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                    <input type="email" id="emailAddress" name="emailAddress" 
+                                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                                    <div id="emailError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email</div>
+                                </div>
+                                
+                                <div>
+                                    <label for="preferredContact" class="block text-gray-700 font-medium mb-2">Preferred Contact Method *</label>
+                                    <select id="preferredContact" name="preferredContact" 
+                                            class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                            required>
+                                        <option value="">Select Method</option>
+                                        <option value="whatsapp">WhatsApp</option>
+                                        <option value="call">Phone Call</option>
+                                        <option value="sms">SMS</option>
+                                        <option value="email">Email</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-end mt-8">
+                                <button type="button" onclick="nextStep(1, 2)" 
+                                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+                                    Next <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Service Details -->
+                        <div id="step2" class="form-step hidden">
+                            <h3 class="text-xl font-bold mb-6 text-gray-800">Service Details</h3>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="md:col-span-2">
+                                    <label for="serviceType" class="block text-gray-700 font-medium mb-2">Service Needed *</label>
+                                    <select id="serviceType" name="serviceType" 
+                                            class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                            required>
+                                        <option value="">Select Service</option>
+                                        <option value="tv-repair">TV Repair</option>
+                                        <option value="dstv-installation">DSTV Installation</option>
+                                        <option value="home-theater">Home Theater Setup</option>
+                                        <option value="appliance-repair">Appliance Repair</option>
+                                        <option value="other">Other Electronics</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="deviceBrand" class="block text-gray-700 font-medium mb-2">Device Brand</label>
+                                    <input type="text" id="deviceBrand" name="deviceBrand" 
+                                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                                </div>
+                                
+                                <div>
+                                    <label for="deviceModel" class="block text-gray-700 font-medium mb-2">Device Model</label>
+                                    <input type="text" id="deviceModel" name="deviceModel" 
+                                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                                </div>
+                                
+                                <div>
+                                    <label for="serviceDate" class="block text-gray-700 font-medium mb-2">Preferred Date *</label>
+                                    <input type="date" id="serviceDate" name="serviceDate" min="" 
+                                           class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                           required>
+                                </div>
+                                
+                                <div>
+                                    <label for="serviceTime" class="block text-gray-700 font-medium mb-2">Time Slot *</label>
+                                    <select id="serviceTime" name="serviceTime" 
+                                            class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                            required>
+                                        <option value="">Select Time</option>
+                                        <option value="morning">Morning (8AM - 12PM)</option>
+                                        <option value="afternoon">Afternoon (12PM - 3PM)</option>
+                                        <option value="evening">Evening (3PM - 6PM)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="md:col-span-2">
+                                    <label for="issueDescription" class="block text-gray-700 font-medium mb-2">Issue Description *</label>
+                                    <textarea id="issueDescription" name="issueDescription" rows="3" 
+                                              class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                              placeholder="Describe the problem you're experiencing..."
+                                              required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-between mt-8">
+                                <button type="button" onclick="prevStep(2, 1)" 
+                                        class="text-gray-600 hover:text-gray-800 font-medium flex items-center">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back
+                                </button>
+                                <button type="button" onclick="nextStep(2, 3)" 
+                                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+                                    Next <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3: Confirmation & Submit -->
+                        <div id="step3" class="form-step hidden">
+                            <h3 class="text-xl font-bold mb-6 text-gray-800">Review Your Booking</h3>
+                            
+                            <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                                <h4 class="font-bold text-lg mb-4 text-gray-800">Booking Summary</h4>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <p class="text-gray-600">Name:</p>
+                                        <p id="reviewName" class="font-medium">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Contact:</p>
+                                        <p id="reviewContact" class="font-medium">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Service:</p>
+                                        <p id="reviewService" class="font-medium">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Device:</p>
+                                        <p id="reviewDevice" class="font-medium">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Date:</p>
+                                        <p id="reviewDate" class="font-medium">-</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-600">Time:</p>
+                                        <p id="reviewTime" class="font-medium">-</p>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <p class="text-gray-600">Issue:</p>
+                                        <p id="reviewIssue" class="font-medium">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="flex items-start">
+                                    <input type="checkbox" id="termsAgreement" name="termsAgreement" 
+                                           class="mt-1 rounded border-gray-300 text-blue-600 focus:ring-blue-500" required>
+                                    <span class="ml-2 text-gray-700">I agree to the <a href="#" class="text-blue-600 hover:underline">Terms of Service</a> and understand that a technician will contact me to confirm my appointment.</span>
+                                </label>
+                                <div id="termsError" class="text-red-500 text-sm mt-1 hidden">You must agree to the terms</div>
+                            </div>
+                            
+                            <div class="flex justify-between">
+                                <button type="button" onclick="prevStep(3, 2)" 
+                                        class="text-gray-600 hover:text-gray-800 font-medium flex items-center">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back
+                                </button>
+                                <button type="submit" 
+                                        class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center">
+                                    <i class="fas fa-check-circle mr-2"></i> Confirm Booking
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md w-full mx-4 shadow-2xl">
+            <div class="text-center">
+                <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-check text-4xl text-green-600"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">Booking Confirmed!</h3>
+                <p class="text-gray-600 mb-6">We've received your booking request. Our team will contact you within 1 hour to confirm your appointment details.</p>
+                
+                <div class="space-y-3">
+                    <a href="https://wa.me/27672734086" 
+                       class="block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-center"
+                       target="_blank">
+                        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+                    </a>
+                    <button id="closeSuccessModal" 
+                            class="w-full text-blue-600 hover:text-blue-800 font-medium py-2">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Ugah Mike TV&Electronics</h3>
+                    <p class="text-gray-400 mb-4">Premium TV & electronics repair services with authorized partnerships with leading brands.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white">Products</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white">TV Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Microwave Repair</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">DSTV-Installations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home Theater Setup</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Warranty Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>118 High Street, Turffontein<br>Johannesburg, 2190</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>(011) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>ugah@electronics.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 9AM - 7PM<br>Sat: 10AM - 5PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Ugah Mike TV&Electronics. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Initialize date picker with today's date as minimum
+    document.getElementById('serviceDate').min = new Date().toISOString().split('T')[0];
+    
+    // Form navigation functions
+    function nextStep(current, next) {
+        if (!validateStep(current)) return;
+        
+        document.getElementById(`step${current}`).classList.add('hidden');
+        document.getElementById(`step${next}`).classList.remove('hidden');
+        updateProgress(current, next);
+    }
+    
+    function prevStep(current, prev) {
+        document.getElementById(`step${current}`).classList.add('hidden');
+        document.getElementById(`step${prev}`).classList.remove('hidden');
+        updateProgress(current, prev, false);
+    }
+    
+    function updateProgress(oldStep, newStep, isForward = true) {
+        const progressSteps = document.querySelectorAll('.flex-1');
+        
+        if (isForward) {
+            progressSteps[newStep-1].querySelector('span').classList.remove('bg-gray-200', 'text-gray-600');
+            progressSteps[newStep-1].querySelector('span').classList.add('bg-blue-600', 'text-white');
+            progressSteps[newStep-1].classList.remove('border-gray-200');
+            progressSteps[newStep-1].classList.add('border-blue-600');
+        } else {
+            progressSteps[oldStep-1].querySelector('span').classList.add('bg-gray-200', 'text-gray-600');
+            progressSteps[oldStep-1].querySelector('span').classList.remove('bg-blue-600', 'text-white');
+            progressSteps[oldStep-1].classList.add('border-gray-200');
+            progressSteps[oldStep-1].classList.remove('border-blue-600');
+        }
+    }
+    
+    // Step validation
+    function validateStep(step) {
+        let isValid = true;
+        
+        if (step === 1) {
+            // Validate step 1 fields
+            const name = document.getElementById('fullName');
+            const phone = document.getElementById('phoneNumber');
+            const email = document.getElementById('emailAddress');
+            
+            if (!name.value.trim()) {
+                document.getElementById('nameError').classList.remove('hidden');
+                name.classList.add('border-red-500');
+                isValid = false;
+            }
+            
+            if (!phone.value.trim()) {
+                document.getElementById('phoneError').classList.remove('hidden');
+                phone.classList.add('border-red-500');
+                isValid = false;
+            }
+            
+            if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                document.getElementById('emailError').classList.remove('hidden');
+                email.classList.add('border-red-500');
+                isValid = false;
+            }
+        } else if (step === 2) {
+            // Validate step 2 fields
+            const service = document.getElementById('serviceType');
+            const date = document.getElementById('serviceDate');
+            const time = document.getElementById('serviceTime');
+            const issue = document.getElementById('issueDescription');
+            
+            if (!service.value) {
+                service.classList.add('border-red-500');
+                isValid = false;
+            }
+            
+            if (!date.value) {
+                date.classList.add('border-red-500');
+                isValid = false;
+            }
+            
+            if (!time.value) {
+                time.classList.add('border-red-500');
+                isValid = false;
+            }
+            
+            if (!issue.value.trim()) {
+                issue.classList.add('border-red-500');
+                isValid = false;
+            }
+        }
+        
+        return isValid;
+    }
+    
+    // Form submission
+    document.getElementById('repairOrderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validate final step
+        if (!document.getElementById('termsAgreement').checked) {
+            document.getElementById('termsError').classList.remove('hidden');
+            return;
+        }
+        
+        // Update review section
+        document.getElementById('reviewName').textContent = document.getElementById('fullName').value;
+        document.getElementById('reviewContact').textContent = 
+            `${document.getElementById('phoneNumber').value} (${document.getElementById('preferredContact').value})`;
+        document.getElementById('reviewService').textContent = 
+            document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text;
+        document.getElementById('reviewDevice').textContent = 
+            `${document.getElementById('deviceBrand').value || 'Not specified'} ${document.getElementById('deviceModel').value || ''}`.trim();
+        document.getElementById('reviewDate').textContent = document.getElementById('serviceDate').value;
+        document.getElementById('reviewTime').textContent = 
+            document.getElementById('serviceTime').options[document.getElementById('serviceTime').selectedIndex].text;
+        document.getElementById('reviewIssue').textContent = document.getElementById('issueDescription').value;
+        
+        // Prepare form data
+        const formData = {
+            customer: {
+                name: document.getElementById('fullName').value,
+                phone: document.getElementById('phoneNumber').value,
+                email: document.getElementById('emailAddress').value,
+                preferredContact: document.getElementById('preferredContact').value
+            },
+            service: {
+                type: document.getElementById('serviceType').value,
+                typeDisplay: document.getElementById('serviceType').options[document.getElementById('serviceType').selectedIndex].text,
+                brand: document.getElementById('deviceBrand').value,
+                model: document.getElementById('deviceModel').value,
+                issue: document.getElementById('issueDescription').value
+            },
+            appointment: {
+                date: document.getElementById('serviceDate').value,
+                time: document.getElementById('serviceTime').value,
+                timeDisplay: document.getElementById('serviceTime').options[document.getElementById('serviceTime').selectedIndex].text
+            },
+            timestamp: new Date().toISOString()
+        };
+        
+        // In a real implementation, you would send this to your backend
+        console.log('Form submission:', formData);
+        
+        // Show success modal
+        document.getElementById('successModal').classList.remove('hidden');
+        
+        // Here's where you would typically make a fetch request to your backend:
+        /*
+        fetch('/api/bookings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('successModal').classList.remove('hidden');
+            this.reset();
+        })
+        .catch(error => {
+            alert('There was an error submitting your booking. Please try again or contact us directly.');
+        });
+        */
+    });
+    
+    // Close success modal
+    document.getElementById('closeSuccessModal').addEventListener('click', function() {
+        document.getElementById('successModal').classList.add('hidden');
+        document.getElementById('repairOrderForm').reset();
+        
+        // Reset form steps
+        document.querySelectorAll('.form-step').forEach(step => {
+            step.classList.add('hidden');
+        });
+        document.getElementById('step1').classList.remove('hidden');
+        
+        // Reset progress
+        document.querySelectorAll('.flex-1').forEach((step, index) => {
+            if (index > 0) {
+                step.querySelector('span').classList.add('bg-gray-200', 'text-gray-600');
+                step.querySelector('span').classList.remove('bg-blue-600', 'text-white');
+                step.classList.add('border-gray-200');
+                step.classList.remove('border-blue-600');
+            }
+        });
+    });
+    
+    // Real-time validation for fields
+    document.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('input', function() {
+            this.classList.remove('border-red-500');
+            
+            if (this.id === 'fullName' && this.value.trim()) {
+                document.getElementById('nameError').classList.add('hidden');
+            }
+            
+            if (this.id === 'phoneNumber' && this.value.trim()) {
+                document.getElementById('phoneError').classList.add('hidden');
+            }
+            
+            if (this.id === 'emailAddress' && (this.value === '' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value))) {
+                document.getElementById('emailError').classList.add('hidden');
+            }
+        });
+    });
+    
+    document.getElementById('termsAgreement').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('termsError').classList.add('hidden');
+        }
+    });
+</script>
+</body>
+</html>
